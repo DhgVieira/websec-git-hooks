@@ -1,0 +1,38 @@
+diff --git a/index.js b/index.js
+index 7e05c79..dd626af 100644
+--- a/index.js
++++ b/index.js
+@@ -11,7 +11,7 @@ function get_user(){
+    console.log("something")
+-   console.log("something elze")
++   console.log("something else")
+ }
+
+ function get_user(){
+     """
+diff --git a/main.go b/main.go
+index 8f48b50..727097d 100644
+--- a/main.go
++++ b/main.go
+@@ -23,10 +23,10 @@ func main(){
+     log.Error(ctx, "some error",
+         log.Err(err), 
+         log.String("user", user),
+-        log.String("repo", repo),
++        log.String("repository", repo) 
+     )
+-        panic(err)
+-        fmt.Printn("ERROR")
++       log.Fatal(err)
+
+ function main2(){
+diff --git a/setup.py b/setup.py
+index dd39f8c..c672fd1 100644
+--- a/setup.py
++++ b/setup.py
+@@ -3,7 +3,7 @@ import logging
+ from pre_commit_hook.errors import RequestError, DiffError
+ from pre_commit_hook.utils import generate_uuid, is_check_skipped
+ from pre_commit_hook.git import get_repository, get_user, get_diff
+-from pre_commit_hook.tmp_file import save_on_temp
++from pre_commit_hook.tmp_file import save_on_tmp
