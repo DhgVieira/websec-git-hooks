@@ -1,4 +1,4 @@
-# SAST Precommit
+# PRE Commit Precommit
 
 The goal of this project is to prevent hardcoded credentials from reaching GitHub.
 
