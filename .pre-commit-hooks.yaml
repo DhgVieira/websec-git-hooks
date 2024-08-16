@@ -1,5 +1,5 @@
 - id: pre_commit_hook
-  name: Check Pre commit data
+  name: Sonar check
   description: Checks the commit additions in order to prevent PII data to be pushed to GitHub.
   entry: .pre-commit-script.sh
   language: script
