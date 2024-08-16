@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Verifica se estamos no diretório correto
+echo "Verifying if we are in the correct directory..."
 if [ ! -d "build/classes" ]; then
   echo "Error: Source build/classes not found. Please run build first."
   exit 1
 fi
 echo "upload started"
 # Obtém o hash do commit atual do Git $(git rev-parse HEAD)
-commitHash=$(git rev-parse HEAD)
+commitHash=$2
 echo "Commit Hash: $commitHash"
 
 if [ -z "$commitHash" ]; then

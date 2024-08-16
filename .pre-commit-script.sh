@@ -1,3 +1,4 @@
 #!/bin/bash
 echo "Executando script de pre-push de jhersonharyson..."
-./upload.sh $1
+commitHash=$(git rev-parse HEAD)
+./upload.sh mgrowth-sameday-manager $commitHash
