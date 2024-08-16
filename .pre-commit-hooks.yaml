@@ -1,6 +1,6 @@
 - id: pre_commit_hook
   name: Check Pre commit data
   description: Checks the commit additions in order to prevent PII data to be pushed to GitHub.
-  entry: .pre-commit-script.sh
+  entry: .pre-commit-script.sh {{projectName}}
   language: script
   always_run: true
