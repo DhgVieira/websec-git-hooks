@@ -35,8 +35,8 @@ fi
 
 # Faz o upload do arquivo zip usando curl
 #uploadUrl="https://local.adminml.com:8443/api/metrics/quality/upload?projectName=${projectName}"
-uploadUrl="https://quality-beta.adminml.com/api/metrics/quality/upload?projectName=${projectName}"
-#uploadUrl="https://api.mercadopago.com/mgrowth-quality/api/metrics/quality/upload?projectName=${projectName}"
+#uploadUrl="https://quality-beta.adminml.com/api/metrics/quality/upload?projectName=${projectName}"
+uploadUrl="https://api.mercadopago.com/mgrowth-quality/api/metrics/quality/upload?projectName=${projectName}"
 
 response=$(curl -s -w "%{http_code}" -o /dev/null -F "file=@${zipFileName}" -F "projectName=${projectName}" "$uploadUrl")
 
