@@ -7,7 +7,8 @@ if [ ! -d "build/classes" ]; then
 fi
 
 # Obtém o hash do commit atual do Git $(git rev-parse HEAD)
-commitHash=$2
+commitHash=$(git rev-parse HEAD)
+echo "Commit Hash: $commitHash"
 if [ -z "$commitHash" ]; then
   echo "Error: Cannot get current commit hash."
   exit 1
@@ -20,6 +21,7 @@ fi
 
 # Parâmetro do script
 projectName=$1
+echo "Project Name: $projectName"
 
 # Define o nome do arquivo zip
 zipFileName="${commitHash}.zip"
