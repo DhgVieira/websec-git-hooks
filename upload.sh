@@ -8,7 +8,9 @@ fi
 
 # Obtém o hash do commit atual do Git $(git rev-parse HEAD)
 commitHash=$(git rev-parse HEAD)
+echo
 echo "Commit Hash: $commitHash"
+
 if [ -z "$commitHash" ]; then
   echo "Error: Cannot get current commit hash."
   exit 1
